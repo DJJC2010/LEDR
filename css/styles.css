@@ -398,11 +398,17 @@ h1, h2, h3, h4 {
 }
 .hero-tagline-xl .accent { color: var(--orange); }
 .hero-desc-xl {
-  font-size: clamp(15px, 1.6vw, 18px);
+  font-size: clamp(15px, 2vw, 24px);
   color: var(--text-muted-on-navy);
   line-height: 1.5;
-  max-width: 620px;
+  max-width: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 22px;
 }
+
 .hero-desc-xl .accent { color: var(--orange); font-weight: 700; }
 .hero-presented-xl {
   font-family: var(--font-display);
@@ -423,31 +429,29 @@ h1, h2, h3, h4 {
    wordmark and tagline, so we just frame it on matching navy and let any
    leftover space (above/below on very wide/short screens, or left/right on
    very tall/narrow ones) show the same navy with no visible seam. */
-.hero-banner-section {
+.hero-image-section {
   background: var(--navy-banner);
   display: block;
   min-height: 0;
 }
-.hero-banner-frame {
+.hero-image-frame {
   width: 100%;
-  height: min(40vw, 460px);
-  min-height: 190px;
-  background: var(--navy-banner);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  height: clamp(240px, 34vw, 460px);
   overflow: hidden;
+  background: var(--navy-banner);
+  display: block;
+  line-height: 0;
 }
-.hero-banner-frame img {
+.hero-image-frame img {
+  width: 100%;
   height: 100%;
-  width: auto;
+  object-fit: cover;
+  object-position: center 48%;
   max-width: none;
   display: block;
-  flex-shrink: 0;
 }
-.hero-banner-frame .media-placeholder {
-  height: 100%;
-  width: min(40vw, 460px);
+.hero-image-frame .media-placeholder {
+  width: 100%;
   aspect-ratio: 1983 / 793;
   display: flex;
   align-items: center;
@@ -461,9 +465,9 @@ h1, h2, h3, h4 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.hero-banner-supporting {
+.hero-image-caption {
   text-align: center;
-  padding: 40px 24px 130px;
+  padding: 30px 5vw 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -874,7 +878,7 @@ h1, h2, h3, h4 {
 }
 
 .program-cards-wrap {
-  margin-top: -95px;
+  margin-top: -60px;
   position: relative;
   z-index: 10;
 }
