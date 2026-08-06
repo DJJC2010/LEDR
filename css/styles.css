@@ -161,6 +161,9 @@ h1, h2, h3, h4 {
   transition: border-color 0.15s ease, color 0.15s ease;
   white-space: nowrap;
 }
+
+.nav-letter { color: var(--orange); }
+
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
   color: var(--orange);
@@ -732,6 +735,9 @@ h1, h2, h3, h4 {
   align-items: start;
   padding-bottom: 48px;
 }
+.band-item {
+  text-align: center;
+}
 .band-item h3 {
   color: var(--white);
   font-size: 14px;
@@ -752,7 +758,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
 }
 .band-divider {
   width: 1px;
@@ -972,3 +978,28 @@ h1, h2, h3, h4 {
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+.module-card.is-gold {
+  background: var(--orange-dark);
+  border-color: transparent;
+}
+.module-card.is-gold .module-number { color: rgba(255,255,255,0.85); }
+.module-card.is-gold h3 { color: var(--white); }
+.module-card.is-gold p { color: rgba(255,255,255,0.85); }
+.module-card.is-gold .icon-circle {
+  border-color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.14);
+}
+
+.feature-card.is-gold {
+  background: var(--orange-dark);
+  border-radius: var(--radius-md);
+  padding: 34px 22px;
+}
+.feature-card.is-gold h3 { color: var(--white); }
+.feature-card.is-gold p { color: rgba(255,255,255,0.85); }
+.feature-card.is-gold .icon-circle {
+  border-color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.14);
+}
+.gold-r { color: var(--orange) !important; }
