@@ -23,8 +23,8 @@
   --text-on-navy: #FFFFFF;
   --text-muted-on-navy: #C7D0DE;
 
-  --font-display: 'Montserrat', 'Arial Narrow', sans-serif;
-  --font-body: 'Open Sans', Arial, sans-serif;
+  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   --container-width: 1200px;
   --radius-sm: 6px;
@@ -285,13 +285,15 @@ h1, h2, h3, h4 {
 
 .hero-media {
   position: relative;
-  min-height: 360px;
+  min-height: clamp(220px, 32vw, 400px);
   background: var(--navy-mid);
 }
 .hero-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: 15% center;
+  background: var(--navy-mid);
   position: absolute;
   inset: 0;
 }
@@ -327,7 +329,6 @@ h1, h2, h3, h4 {
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; min-height: unset; }
   .hero-content { padding: 48px 24px 40px; max-width: none; }
-  .hero-media { min-height: 260px; }
 }
 
 /* Full-bleed centered hero (LEDR home) */
@@ -843,7 +844,7 @@ h1, h2, h3, h4 {
   gap: 16px;
 }
 .program-card.is-featured {
-  background: var(--orange-dark);
+  background: var(--navy-dark);
   color: var(--white);
 }
 .program-card.is-featured .eyebrow,
@@ -983,12 +984,12 @@ h1, h2, h3, h4 {
   background: var(--orange-dark);
   border-color: transparent;
 }
-.module-card.is-gold .module-number { color: rgba(255,255,255,0.85); }
-.module-card.is-gold h3 { color: var(--white); }
-.module-card.is-gold p { color: rgba(255,255,255,0.85); }
+.module-card.is-gold .module-number { color: var(--navy-dark); }
+.module-card.is-gold h3 { color: var(--navy-dark); }
+.module-card.is-gold p { color: var(--navy-dark); }
 .module-card.is-gold .icon-circle {
-  border-color: rgba(255,255,255,0.45);
-  background: rgba(255,255,255,0.14);
+  border-color: rgba(11,31,61,0.35);
+  background: rgba(11,31,61,0.08);
 }
 
 .feature-card.is-gold {
@@ -1002,4 +1003,3 @@ h1, h2, h3, h4 {
   border-color: rgba(255,255,255,0.45);
   background: rgba(255,255,255,0.14);
 }
-.gold-r { color: var(--orange) !important; }

@@ -12,16 +12,16 @@ const IMAGE_CONFIG = {
   "home-hero": "images/ledr-hero-banner.png",
 
   // Alliance page
-  "alliance-hero": "",
+  "alliance-hero": "images/Alliance.png",
 
   // The Designation page
-  "designation-hero": "",
+  "designation-hero": "images/Designation.png",
 
   // Launch page
-  "launch-hero": "",
+  "launch-hero": "images/Launch.png",
 
   // The Broker Summit page
-  "summit-hero": "",
+  "summit-hero": "images/Summit.png",
 };
 
 document.addEventListener("DOMContentLoaded", function () {
