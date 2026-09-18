@@ -41,3 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
     node.parentNode.replaceChild(frag, node);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".module-select").forEach(function (sel) {
+    sel.addEventListener("change", function () {
+      if (this.value) {
+        window.open(this.value, "_blank", "noopener");
+        this.selectedIndex = 0;
+      }
+    });
+  });
+});
