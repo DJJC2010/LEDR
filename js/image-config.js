@@ -9,19 +9,19 @@
 
 const IMAGE_CONFIG = {
   // LEDR home
-  "home-hero": "images/ledr-hero-banner.png",
+  "home-hero": "images/ledr-banner.jpg",
 
   // Alliance page
-  "alliance-hero": "images/Alliance.png",
+  "alliance-hero": "images/alliance-banner.jpg",
 
   // The Designation page
-  "designation-hero": "images/Designation.png",
+  "designation-hero": "images/ledr-banner.jpg",
 
   // Launch page
-  "launch-hero": "images/Launch.png",
+  "launch-hero": "images/launch-banner.jpg",
 
   // The Broker Summit page
-  "summit-hero": "images/Summit.png",
+  "summit-hero": "images/summit-banner.jpg",
 };
 
 document.addEventListener("DOMContentLoaded", function () {
